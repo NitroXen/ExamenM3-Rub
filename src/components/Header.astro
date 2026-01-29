@@ -1,0 +1,119 @@
+---
+
+---
+
+<header>
+  <nav>
+    <a href="#"><img src="assets/icons/apple_logo.svg" alt="apple_logo" /></a>
+    <a href="#" class="nav__a--desktop">Store</a>
+    <a href="#" class="nav__a--desktop">Mac</a>
+    <a href="#" class="nav__a--desktop">IPad</a>
+    <a href="#" class="nav__a--desktop">IPhone</a>
+    <a href="#" class="nav__a--desktop">Watch</a>
+    <a href="#" class="nav__a--desktop">Vision</a>
+    <a href="#" class="nav__a--desktop">AirPods</a>
+    <a href="#" class="nav__a--desktop">TV & Home</a>
+    <a href="#" class="nav__a--desktop">Entertainment</a>
+    <a href="#" class="nav__a--desktop">Accesories</a>
+    <a href="#" class="nav__a--desktop">Support</a>
+    <a href="#"><img src="assets/icons/search.svg" alt="search" /></a>
+    <a href="#"><img src="assets/icons/shop.svg" alt="shop" /></a>
+    <a href="#" class="mobile"><img src="assets/icons/menu.svg" alt="bag" /></a>
+  </nav>
+
+  <div class="menu__mobile">
+    <a href="#" id="close"><img src="assets/icons/close.svg" alt="close" /></a>
+    <a href="#">Store</a>
+    <a href="#">Mac</a>
+    <a href="#">IPad</a>
+    <a href="#">IPhone</a>
+    <a href="#">Watch</a>
+    <a href="#">Vision</a>
+    <a href="#">AirPods</a>
+    <a href="#">TV & Home</a>
+    <a href="#">Entertainment</a>
+    <a href="#">Accesories</a>
+    <a href="#">Support</a>
+  </div>
+</header>
+
+<script>
+  const menu = document.querySelector(".mobile");
+  const menuMobile = document.querySelector(".menu__mobile");
+  const close = document.querySelector("#close");
+  menu.addEventListener("click", () => {
+    menuMobile.classList.toggle("active");
+  });
+  close.addEventListener("click", () => {
+    const menuMobile = document.querySelector(".menu__mobile");
+    menuMobile.classList.remove("active");
+  });
+</script>
+
+<style>
+  header {
+    height: 60px;
+    background-color: rgba(22, 22, 23, 1);
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 10px 20px;
+  }
+  .menu__mobile {
+    display: none;
+  }
+  .menu__mobile.active {
+    display: flex;
+    background-color: rgba(22, 22, 23, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    #close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  }
+  .mobile {
+    display: none;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-family: SF-Pro-Text;
+  }
+
+  .menu__mobile a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-family: SF-Pro-Text;
+  }
+
+  @media (max-width: 390px) {
+    header {
+      height: 68px;
+    }
+    nav a img {
+      width: 60px;
+      height: 60px;
+    }
+    .mobile {
+      display: block;
+    }
+    .nav__a--desktop {
+      display: none;
+    }
+  }
+</style>
