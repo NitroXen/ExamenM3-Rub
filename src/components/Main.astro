@@ -2,68 +2,67 @@
 
 ---
 
-
-
 <main>
-    <div class="hero">
-        <video muted autoplay>
-            <source src="assets/videos/apple_creator_studio.mp4">
-        </video>
-        <h1>
-            All yours for the making.
-        </h1>
-        <video muted autoplay loop class="info">
-            <source src="assets/videos/video_apps.mp4">
-        </video>
-        <p class="info info--text">
-            <span class="details">The apps you need for everything you want to create.</span>  Craft your stories with video in Final Cut Pro. Reimagine images in Pixelmator Pro. Produce your best music in Logic Pro. Supercharge productivity with premium content in Keynote, Pages, Numbers, and Freeform.1 Boost workflows with AI features that build on Apple Intelligence.2 And with Family Sharing, up to five other people can enjoy your subscription too.
-        </p>
-        <p class="info--text">
-            Available starting 1.28
-        </p>
-    </div>
-
+  <div class="hero">
+    <video muted autoplay class="title">
+      <source src="assets/videos/apple_creator_studio.mp4" />
+    </video>
+    <h1>All yours for the making.</h1>
+    <video muted autoplay loop class="info">
+      <source src="assets/videos/video_apps.mp4" />
+    </video>
+    <p class="info info--text">
+      <span class="details"
+        >The apps you need for everything you want to create.</span
+      > Craft your stories with video in Final Cut Pro. Reimagine images in Pixelmator
+      Pro. Produce your best music in Logic Pro. Supercharge productivity with premium
+      content in Keynote, Pages, Numbers, and Freeform.1 Boost workflows with AI features
+      that build on Apple Intelligence.2 And with Family Sharing, up to five other
+      people can enjoy your subscription too.
+    </p>
+    <p class="info--text">Available starting 1.28</p>
+  </div>
 </main>
 
-
 <style>
-    .hero{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: calc(100dvh - 68px);
-        font-family: SF-Pro-Semibold;
-    }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100dvh - 68px);
+    font-family: SF-Pro-Semibold;
+  }
 
-    p{
-        color: #868686;
-        font-family: SF-Pro-Medium;
-    }
-    .info{
-        width: 70%;
-    }
-    .info--text{
-        width:50%;
-        text-align: center;
-    }
+  p {
+    color: #868686;
+    font-family: SF-Pro-Medium;
+  }
+  .info {
+    width: 70%;
+  }
+  .info--text {
+    width: 50%;
+    text-align: center;
+  }
 
-    .details{
-        color: white;
+  .details {
+    color: white;
+  }
+  @media (max-width: 390px) {
+    .title {
+      width: 60%;
     }
-    @media (max-width:390px) {
-        video{
-            width: 100%;
-            height: 100%;
-        }
-        video.info{
-            width:150%
-        }
-        .info{
-            width: 80%;
-            height: 100%;
-        }
+    video {
+      width: 100%;
+      height: 100%;
     }
-
+    video.info {
+      width: 100%;
+    }
+    .info {
+      height: 100%;
+    }
+  }
 </style>
